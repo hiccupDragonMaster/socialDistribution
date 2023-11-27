@@ -1,0 +1,67 @@
+<script setup>
+
+</script>
+
+<template>
+  <div class = "user-profile">
+    <!-- Note: remove hardcoded properties for image -->
+
+<!--    <img src={{ author.profileImage }} alt="user profile image" width="100" height="100">-->
+
+<!--    <h1 id = "disp">{{ author.displayName }}</h1>-->
+<!--    <a id="git" href="http://{{ author.github }}">Check me out on Github</a>-->
+
+<!--    <h4 id="bio">{{ author.bio }}</h4>-->
+
+
+  </div>
+
+  <br/>
+
+  <div class = "posts">
+    <h4>Posts</h4>
+<!--    {% if author.post_set.all %}-->
+    <ul>
+<!--      {% for post in author.post_set.all %}-->
+      <li class="post">
+<!--        <h3><a href="{% url 'project:post' post.id %}">{{ post.title }}</a></h3>-->
+
+<!--        <p>{{ post.content }}</p>-->
+
+<!--        <p>{{ post.postlike_set.count }} &#x1F44D {{ post.comment_set.count }} &#128172</p>-->
+      </li>
+<!--      {% endfor %}-->
+    </ul>
+<!--    {% else %}-->
+    <p>No posts are available.</p>
+<!--    {% endif %}-->
+  </div>
+  <h4> Followers:</h4>
+  <div class = "followers">
+    <ul>
+<!--      {% for follow in author.followers.all %}-->
+      <li>
+<!--        <a href="{% url 'project:profile' follow.id %}">{{follow.displayName}}</a>-->
+      </li>
+<!--      {%endfor%}-->
+    </ul>
+
+  </div>
+
+  <div class = "github-activity">
+    <h4>Github Activity</h4>
+  </div>
+
+<!--  <form method="post" action="{% url 'project:follow' author.id %}">-->
+<!--    {% csrf_token %}-->
+<!--    {% if user.is_authenticated %}-->
+<!--    {% if author.displayName != user.author.displayName %}-->
+  <button type="submit">Follow</button>
+<!--      {%endif%}-->
+<!--      {%endif%}-->
+<!--  </form>-->
+</template>
+
+<style scoped>
+
+</style>
